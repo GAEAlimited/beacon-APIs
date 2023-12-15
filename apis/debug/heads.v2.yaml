@@ -1,5 +1,5 @@
 get:
-  operationId: getDebugChainHeads
+  operationId: getDebugChainHeadsV2
   summary: Get fork choice leaves
   description: Retrieves all possible chain heads (leaves of fork choice tree).
   tags:
@@ -22,5 +22,7 @@ get:
                       $ref: "../../beacon-node-oapi.yaml#/components/schemas/Root"
                     slot:
                       $ref: "../../beacon-node-oapi.yaml#/components/schemas/Uint64"
+                    execution_optimistic:
+                      $ref: "../../beacon-node-oapi.yaml#/components/schemas/ExecutionOptimistic"
     "500":
       $ref: "../../beacon-node-oapi.yaml#/components/responses/InternalError"

@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Eth2.0-API</title>
+    <title>Beacon-API</title>
     <link rel="stylesheet" type="text/css" href="./dist/swagger-ui.css" >
     <link rel="stylesheet" type="text/css" href="./dist/theme-material.css" >
     <style>
@@ -47,6 +47,14 @@
       // Begin Swagger UI call region
       const ui = SwaggerUIBundle({
         urls: [
+          {url: "./releases/v2.4.2/beacon-node-oapi.json", name: "v2.4.2"},
+          {url: "./releases/v2.4.1/beacon-node-oapi.json", name: "v2.4.1"},
+          {url: "./releases/v2.4.0/beacon-node-oapi.json", name: "v2.4.0"},
+          {url: "./releases/v2.3.0/beacon-node-oapi.json", name: "v2.3.0"},
+          {url: "./releases/v2.2.0/beacon-node-oapi.json", name: "v2.2.0"},
+          {url: "./releases/v2.1.0/beacon-node-oapi.json", name: "v2.1.0"},
+          {url: "./releases/v2.0.0/beacon-node-oapi.json", name: "v2.0.0"},
+          {url: "./releases/v1/beacon-node-oapi.json", name: "v1"},
           {url: "./beacon-node-oapi.yaml", name: "dev"}
         ],
         basePath: "/",
@@ -54,6 +62,7 @@
         displayRequestDuration: true,
         deepLinking: true,
         docExpansion: "none",
+        queryConfigEnabled: "true",
         presets: [
           SwaggerUIBundle.presets.apis,
           SwaggerUIStandalonePreset
@@ -62,7 +71,7 @@
           SwaggerUIBundle.plugins.DownloadUrl
         ],
         layout: "StandaloneLayout"
-      })
+   })
       // End Swagger UI call region
 
       window.ui = ui
